@@ -1,3 +1,6 @@
+// *{
+//   outline: 1px solid red;
+// }
 ion-toolbar {
   --background: rgb(131,58,180);
   --background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
@@ -5,4 +8,38 @@ ion-toolbar {
   & ion-title {
     --color: white;
   }
+}
+ion-content{
+  --background: rgb(54, 54, 54);
+}
+ion-card{
+  --background: rgb(85, 85, 85);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+ion-label{
+  height: 100px;
+  text-align: right;
+  font-size: 2.0rem; 
+}
+ion-button{
+  --color: white;
+  transition: 1s;
+}
+ion-button:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#result{
+  height: 70px;
+  display: flex;
+  text-align: end;
+  color: white;
+}
+.deletar:hover{
+  --background: rgb(223, 8, 8);
+}
+.igual:hover{
+  --background: rgb(116, 116, 116);
+}
+.operacao:hover{
+  --background: rgb(116, 116, 116);
 }
