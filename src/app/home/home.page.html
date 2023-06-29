@@ -9,58 +9,63 @@
 <ion-content [fullscreen]="true">
 
   <ion-row class="ion-justify-content-center">
+
     <ion-col size="15" size-lg="6">
 
       <ion-row class="ion-justify-content-center">
+
         <ion-card card-principal>
+
             <ion-card id="result" class="ion-justify-content-center">
               <ion-col>
                 <ion-label>{{this.resultado}}</ion-label>
               </ion-col>
             </ion-card>
+
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="deletar" >AC</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao">÷</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >*</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="deletar" >⌫</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="deletar"  (click)="this.deletar">AC</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.div()">÷</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.mult()">*</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="deletar"  (click)="this.backspace">⌫</ion-button></ion-col>
               </ion-row>
             </ion-grid>
         
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >7</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >8</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >9</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >-</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('7')">7</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('8')">8</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('9')">9</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.sub()">-</ion-button></ion-col>
               </ion-row>
             </ion-grid> 
           
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >4</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >5</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >6</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >+</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('4')">4</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('5')">5</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('6')">6</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.soma()">+</ion-button></ion-col>
               </ion-row>
             </ion-grid>
         
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >1</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >2</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >3</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('1')">1</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('2')">2</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('3')">3</ion-button></ion-col>
                 <ion-col></ion-col>
               </ion-row>
             </ion-grid>
         
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" >0</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="operacao">.</ion-button></ion-col>
-                <ion-col><ion-button fill="clear" size="large" class="igual" >=</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('0')">0</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" >.</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="igual"    (click)="calcular()">=</ion-button></ion-col>
               </ion-row>
             </ion-grid>
+
           </ion-card>
         </ion-row>
       </ion-col>
