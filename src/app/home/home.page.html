@@ -14,6 +14,7 @@
         <ion-card card-principal>
             <ion-card id="result" class="ion-justify-content-center">
               <ion-button id="open-modal" color="medium" shape="round" fill="outline" class="historico" size="small">H</ion-button>
+                                                                                            <!-- (click)="this.adiciona()" -->
               <ion-col>
                 <!-- Keyup ativa quando qualquer tecla é clicada   -->
                 <!-- #box (keyup.enter)="calcvalue(box.value)" -->
@@ -61,11 +62,13 @@
               <ion-row>
                 <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('0')">0</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('.')">.</ion-button></ion-col>
-                <ion-col></ion-col>
-                <ion-col><ion-button id="open-custom-dialog" color="secondary" shape="round" fill="outline" class="maisoperacoes" size="large">^</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" color="secondary" class="operacao" (click)="this.num('(')">(</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" color="secondary" class="operacao" (click)="this.num(')')">)</ion-button></ion-col>
+                <!-- <ion-col></ion-col>
+                <ion-col><ion-button id="open-custom-dialog" color="secondary" shape="round" fill="outline" class="maisoperacoes" size="large">^</ion-button></ion-col> -->
               </ion-row>
             </ion-grid>
-            <ion-content class="ion-padding">                          
+            <!-- <ion-content class="ion-padding">                          
               <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
                 <ng-template>
                   <div class="wrapper">
@@ -74,8 +77,9 @@
                     <ion-grid>
                       <ion-row>
                         <ion-col></ion-col>
-                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.raiz()">√</ion-button></ion-col>
-                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.pi()">π</ion-button></ion-col>
+                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.raiz('√')">√</ion-button></ion-col>
+                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.elevacao('^')">^</ion-button></ion-col>
+                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.pi('π')">π</ion-button></ion-col>
                         <ion-col></ion-col>
                       </ion-row>
                     </ion-grid>
@@ -92,7 +96,7 @@
                   </div>
                 </ng-template>
               </ion-modal>
-            </ion-content>
+            </ion-content> -->
             <ion-content class="ion-padding">
             
               <ion-modal
@@ -105,6 +109,7 @@
                   <ion-content class="ion-padding">
                     <div class="ion-margin-top">
                       <ion-label>Historico.</ion-label>
+                      <h3>Não esta funcionando</h3>
                     </div>
                   </ion-content>
                 </ng-template>

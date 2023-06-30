@@ -13,8 +13,9 @@ export class HomePage {
   
   resultado = '0';
   valoratual = '';
-  conta: number = 0;
-  resultados: number = 0;
+  // conta: number = 0;
+  // adicionado = false
+  // historico : string[] = [];
 
   num(value: string){  
     this.valoratual = this.valoratual + value    
@@ -24,10 +25,25 @@ export class HomePage {
     this.resultado = eval(this.valoratual)
     this.valoratual = this.resultado
   }
-  raiz(){
-    const raiz = Math.sqrt(this.conta);
-    this.resultados = this.conta;
-  }
+  // adiciona(){
+  //   console.log(`Adicionado ${this.resultado}`)
+  //   this.adicionado = true;
+  //   this.historico.push(this.resultado);
+  // }
+  // raiz(value: string){
+  //   this.valoratual = this.valoratual + value    
+  //   this.resultado = this.valoratual
+  //   // const raiz = Math.sqrt(this.conta);
+  //   // this.conta = Number(this.resultado);
+  // }
+  // pi(value: string){
+  //   this.valoratual = this.valoratual + value    
+  //   this.resultado = this.valoratual
+  // }
+  // elevacao(value: string){
+  //   this.valoratual = this.valoratual + value    
+  //   this.resultado = this.valoratual
+  // }
   deletar() {
     this.valoratual = '';
     this.resultado = '0';
@@ -45,10 +61,6 @@ export class HomePage {
   //   }
   //   this.resultado = eval(solve)
   // }
-  pi(){
-
-  }
-  
   
 }
 
