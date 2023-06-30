@@ -24,6 +24,15 @@
 
             <ion-grid>
               <ion-row>
+                <ion-col><ion-button fill="clear" size="medium" class="operacao" (click)="this.num('%')">%</ion-button></ion-col>
+                <ion-col></ion-col>
+                <ion-col></ion-col>
+                <ion-col><ion-button id="open-custom-dialog" expand="block" color="secondary" shape="round" fill="outline" class="maisoperacoes" size="small">^</ion-button></ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-grid>
+              <ion-row>
                 <ion-col><ion-button fill="clear" size="large" class="deletando"  (click)="this.deletar()">AC</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('/')">÷</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('*')">*</ion-button></ion-col>
@@ -60,15 +69,15 @@
         
             <ion-grid>
               <ion-row>
-                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('0')">0</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('.')">.</ion-button></ion-col>
+                <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('0')">0</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" color="secondary" class="operacao" (click)="this.num('(')">(</ion-button></ion-col>
                 <ion-col><ion-button fill="clear" size="large" color="secondary" class="operacao" (click)="this.num(')')">)</ion-button></ion-col>
                 <!-- <ion-col></ion-col>
                 <ion-col><ion-button id="open-custom-dialog" color="secondary" shape="round" fill="outline" class="maisoperacoes" size="large">^</ion-button></ion-col> -->
               </ion-row>
             </ion-grid>
-            <!-- <ion-content class="ion-padding">                          
+            <ion-content class="ion-padding">                          
               <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
                 <ng-template>
                   <div class="wrapper">
@@ -83,20 +92,20 @@
                         <ion-col></ion-col>
                       </ion-row>
                     </ion-grid>
-
                     <ion-grid>
                       <ion-row>
                         <ion-col></ion-col>
-                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num('(')">(</ion-button></ion-col>
-                        <ion-col><ion-button fill="clear" size="large" class="operacao" (click)="this.num(')')">)</ion-button></ion-col>
+                        <ion-col></ion-col>
+                        <ion-col></ion-col>
                         <ion-col></ion-col>
                       </ion-row>
                     </ion-grid>
-
+                    <h6>Não está funcionando</h6>
                   </div>
                 </ng-template>
               </ion-modal>
-            </ion-content> -->
+            </ion-content>
+
             <ion-content class="ion-padding">
             
               <ion-modal
